@@ -72,9 +72,14 @@ image {
   margin: 0%;
   padding: 0%;
 }
-svg {
+.taskbar svg {
   width: 30px;
   color: pink;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+.taskbar svg:hover {
+  transform: scale(1.3);
 }
 
 video {
@@ -170,7 +175,15 @@ li a {
   margin-top: 10px;
 }
 .pictureline img {
-  width: 39vw; /* Specified height */
+  width: 29vw;
+  transition: transform 0.4s ease; /* Smooth zoom effect */
+}
+
+.pictureline img:hover {
+  transform: scale(1.2); /* Zoom by 120% */
+}
+.imgclass {
+  overflow: hidden;
 }
 
 .pictureline h1 {
