@@ -8,7 +8,7 @@ export default function Taskbar() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShouldRenderCounter(true);
-    }, 6000);
+    }, 4000);
 
     return () => clearTimeout(timeout);
   }, []);
