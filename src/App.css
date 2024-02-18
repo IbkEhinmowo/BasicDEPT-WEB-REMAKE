@@ -1,148 +1,137 @@
 #root {
-  margin: 0% ;
+  margin: 0%;
   padding: 0%;
   overflow: hidden;
-
-  
-  
 }
-html{
-scroll-behavior:smooth;  
+html {
+  scroll-behavior: smooth;
 }
-.navig{
-
+.taskbar {
   width: 99%;
-  
-  position:absolute;
+
+  position: absolute;
   right: 0px;
   margin-top: 1%;
-  
-  
-  background-color: #252422;;
+
+  background-color: #252422;
 }
-.nav{
-  
+.nav {
   max-width: 95%;
   width: 100%;
   height: 10%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #252422;;
-  border-radius: 40px;
-https://m.media-amazon.com/images/S/aplus-media-library-service-media/ab94005c-44cf-4375-a95b-76c7d4fe9f25.__CR0,0,1464,600_PT0_SX1464_V1___.jpg
+  border-radius: 10px;
+  background-color: #252422;
+
   display: flex;
   margin: auto;
   transition: background-color 0.3s;
 }
-.navig{
-  animation: fadeInAnimation ease-in-out 3s;
+.navig {
+  animation: fadeInFromLeft ease-in 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-@keyframes fadeInAnimation {
+
+.headroom--pinned {
+  position: fixed;
+  top: 10px !important;
+  transform: translateY(0%);
+}
+@keyframes fadeInFromLeft {
   0% {
-      opacity: 0;
+    opacity: 0; /* Start slightly faded */
+    transform: translateX(-20px); /* Push 20px offscreen to the left */
   }
   100% {
-      opacity: 1;
+    opacity: 1;
+    transform: translateX(0); /* Return to its normal position */
   }
 }
-
-.nav h1{
-  font-size:x-large;
-  
+.nav h1 {
+  font-size: x-large;
 }
-.nav ul{
+.nav ul {
   padding-right: 8rem;
   display: flex;
-  
+
   width: 55%;
-  
-  
 }
- li {
+li {
   list-style: none;
   width: 100%;
-  
 }
 a {
-  text-decoration: none; 
-  color: #F9CDCD;
+  text-decoration: none;
+  color: #f9cdcd;
 }
-image{
+image {
   width: 30px;
   margin: 0%;
   padding: 0%;
-  
 }
-svg{
- width: 30px;
- color: pink;
-  
+svg {
+  width: 30px;
+  color: pink;
 }
 
-video{
-  
+video {
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  
 }
 
-
-
 li a {
- color: #F9CDCD;
-    font-weight:400;
+  color: #f9cdcd;
+  font-weight: 400;
   font-size: small;
   text-decoration: none;
 
   display: inline-block;
   font-weight: 500;
-  padding: .5em;
-  margin-left: -.5em;
+  padding: 0.5em;
+  margin-left: -0.5em;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
-  &:before, &:after {
-      position: absolute;
-      content: '';
-      border-bottom: 2px solid #F9CDCD;;
-      border-radius: 1em;
-      bottom: .3em;
-      transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #f9cdcd;
+    border-radius: 1em;
+    bottom: 0.3em;
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   &:before {
-      width: 1em;
-      transform-origin: left;
+    width: 1em;
+    transform-origin: left;
   }
 
   &:after {
-      width: 82%;
-      left: 1em;
-      transform: translateX(110%);
+    width: 82%;
+    left: 1em;
+    transform: translateX(110%);
   }
 
   &:hover:before {
-      transform: scaleX(0.3);
+    transform: scaleX(0.3);
   }
 
   &:hover:after {
-      transform: translateX(0);
+    transform: translateX(0);
   }
-
 }
 
-
-#basictest{
-  max-width:30%;
+#basictest {
+  max-width: 30%;
 }
-.below11{
-  
+.below11 {
   border-top: #252422 solid;
   border-width: thin;
   width: 90%;
@@ -151,12 +140,10 @@ li a {
   align-items: center;
   margin: auto;
   margin-top: 15%;
-
- 
 }
-.below1 p{
+.below1 p {
   width: 70%;
-  
+
   color: #252422;
   font-family: avenir;
   font-size: 36px;
@@ -165,16 +152,16 @@ li a {
   line-height: normal;
 }
 
-.below1 h1{
+.below1 h1 {
   color: #252422;
   font-family: Avenir;
   font-size: 10vw;
-  font-style:normal;
-  font-weight:bolder;
+  font-style: normal;
+  font-weight: bolder;
   line-height: normal;
 }
 
-.pictureline{
+.pictureline {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -183,18 +170,11 @@ li a {
   margin-top: 10px;
 }
 .pictureline img {
- width:39vw; /* Specified height */
+  width: 39vw; /* Specified height */
 }
 
-.pictureline h1{
+.pictureline h1 {
   font-weight: 700;
-  font-size:larger;
+  font-size: larger;
   font-family: Inter;
 }
-
-
-
-
-
-
-

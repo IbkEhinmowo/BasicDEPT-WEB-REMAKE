@@ -9,6 +9,8 @@ export default function Taskbar() {
     const timeout = setTimeout(() => {
       setShouldRenderCounter(true);
     }, 6000);
+
+    return () => clearTimeout(timeout);
   }, []);
 
   const handleSidebar = () => {
@@ -18,10 +20,10 @@ export default function Taskbar() {
     // Add margin as needed
   };
   return (
-    <div>
+    <div className="taskbar">
       {shouldRenderCounter && (
-        <div className="navig">
-          <Headroom style={headroomStyle}>
+        <Headroom style={headroomStyle}>
+          <div className="navig">
             <nav className="nav">
               <h1>
                 <a href="./">BASIC/DEPT®</a>
@@ -58,8 +60,8 @@ export default function Taskbar() {
                 <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
               </svg>
             </nav>
-          </Headroom>
-        </div>
+          </div>
+        </Headroom>
       )}
     </div>
   );
