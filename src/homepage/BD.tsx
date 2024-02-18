@@ -16,15 +16,24 @@ export default function BD() {
       </div>
       <div className="pictureline">
         <div>
-          <img src="src/assets/photo1.jpg" alt="" />
+          <div className="imgclass">
+            <img src="src/assets/photo1.jpg" alt="" />
+          </div>
+
           <h1> PATAGONIA</h1>
         </div>
-        {/* <div className="photo2">
-          <img src="src/assets/photo2.png" alt="" />
+        <div className="photo3">
+          <div className="imgclass">
+            <img src="src/assets/photo3.jpg" alt="" />
+          </div>
+
           <h1>WILSON</h1>
-        </div> */}
+        </div>
         <div>
-          <img src="src/assets/photo2.jpg" alt="" />
+          <div className="imgclass">
+            <img src="src/assets/photo2.jpg" alt="" />
+          </div>
+
           <h1>GOOGLE STORE</h1>
         </div>
       </div>
