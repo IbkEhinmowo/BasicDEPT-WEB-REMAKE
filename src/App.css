@@ -34,7 +34,19 @@ https://m.media-amazon.com/images/S/aplus-media-library-service-media/ab94005c-4
   display: flex;
   margin: auto;
   transition: background-color 0.3s;
- 
+}
+.navig{
+  animation: fadeInAnimation ease-in-out 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .nav h1{
@@ -156,7 +168,7 @@ li a {
 .below1 h1{
   color: #252422;
   font-family: Avenir;
-  font-size: 250px;
+  font-size: 10vw;
   font-style:normal;
   font-weight:bolder;
   line-height: normal;
@@ -165,13 +177,13 @@ li a {
 .pictureline{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   max-width: 90%;
   margin: auto;
+  margin-top: 10px;
 }
 .pictureline img {
-
-  width: 480px; /* Specified width */
-  height: 682px; /* Specified height */
+ width:39vw; /* Specified height */
 }
 
 .pictureline h1{
