@@ -42,7 +42,7 @@ html {
 @keyframes fadeInFromLeft {
   0% {
     opacity: 0; /* Start slightly faded */
-    transform: translateX(-20px); /* Push 20px offscreen to the left */
+    transform: translateX(-20px);
   }
   100% {
     opacity: 1;
@@ -143,6 +143,7 @@ li a {
   justify-content: space-around;
   align-items: center;
   margin: auto;
+
   margin-top: 15%;
 }
 .below1 p {
@@ -196,5 +197,13 @@ li a {
   }
   .nav {
     justify-content: space-between;
+  }
+  .below1 p {
+    width: 90%;
+    font-size: 5vw;
+  }
+  .pictureline img {
+    width: 90vw;
+    transition: transform 0.4s ease; /* Smooth zoom effect */
   }
 }
