@@ -12,7 +12,7 @@ html {
   position: relative;
   right: 0px;
   margin: 0;
-  background-color: transparent;
+  background-color: #252422;
 }
 .nav {
   max-width: 95vw;
@@ -24,7 +24,6 @@ html {
   border-radius: 10px;
   background-color: #252422;
   background-color: transparent;
-  display: flex;
   margin: auto;
   transition: background-color 0.3s;
 }
@@ -57,10 +56,11 @@ html {
   top: 0px !important;
   transform: translateY(0%);
   color: black !important;
+  z-index: 10;
 }
 .headroom--pinned a,
 svg {
-  color: black !important;
+  color: pink !important;
 }
 @keyframes fadeInFromLeft {
   0% {
@@ -74,6 +74,7 @@ svg {
 }
 .nav h1 {
   font-size: x-large;
+  font-weight: bolder;
 }
 .nav ul {
   padding-right: 8rem;
@@ -88,7 +89,6 @@ li {
 .taskbar a {
   text-decoration: none;
   color: #f9cdcd;
-  font-size: larger;
 }
 image {
   width: 30px;
@@ -115,14 +115,12 @@ video {
 
 li a {
   color: #f9cdcd;
-  font-weight: 400;
-  font-size: small;
+  font-size: medium;
   text-decoration: none;
-
   display: inline-block;
-  font-weight: 500;
+  font-weight: 1000;
   padding: 0.5em;
-  margin-left: -0.5em;
+  margin-left: -0.5rem;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
@@ -215,7 +213,7 @@ li a {
   font-size: larger;
   font-family: Inter;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   .nav ul {
     display: none;
   }
