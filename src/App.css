@@ -7,16 +7,15 @@ html {
   scroll-behavior: smooth;
 }
 .taskbar {
-  width: 99%;
+  width: 100vw;
 
-  position: absolute;
+  position: relative;
   right: 0px;
-  margin-top: 1%;
-
-  background-color: #252422;
+  margin: 0;
+  background-color: transparent;
 }
 .nav {
-  max-width: 95%;
+  max-width: 95vw;
   width: 100%;
   height: 10%;
   display: flex;
@@ -24,29 +23,53 @@ html {
   align-items: center;
   border-radius: 10px;
   background-color: #252422;
+  background-color: transparent;
   display: flex;
   margin: auto;
   transition: background-color 0.3s;
 }
 .navig {
-  animation: fadeInFromLeft ease-in 2s;
+  animation: fadeInFromLeft linear 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  zindex: 1;
+}
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+.headroom--scrolled {
+  transition: transform 200ms ease-in-out;
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+}
 
 .headroom--pinned {
+  width: 100vw;
   position: fixed;
-  top: 10px !important;
+  top: 0px !important;
   transform: translateY(0%);
+  color: black !important;
+}
+.headroom--pinned a,
+svg {
+  color: black !important;
 }
 @keyframes fadeInFromLeft {
   0% {
     opacity: 0; /* Start slightly faded */
-    transform: translateX(-20px);
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0); /* Return to its normal position */
+    transform: translateY(0); /* Return to its normal position */
   }
 }
 .nav h1 {
@@ -62,9 +85,10 @@ li {
   list-style: none;
   width: 100%;
 }
-a {
+.taskbar a {
   text-decoration: none;
   color: #f9cdcd;
+  font-size: larger;
 }
 image {
   width: 30px;
