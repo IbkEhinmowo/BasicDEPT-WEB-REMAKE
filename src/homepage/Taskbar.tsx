@@ -8,7 +8,7 @@ export default function Taskbar() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShouldRenderCounter(true);
-    }, 6000);
+    }, 4000);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -22,7 +22,7 @@ export default function Taskbar() {
   return (
     <div className="taskbar">
       {shouldRenderCounter && (
-        <Headroom style={headroomStyle}>
+        <Headroom style={headroomStyle} disableInlineStyles={true}>
           <div className="navig">
             <nav className="nav">
               <h1>
