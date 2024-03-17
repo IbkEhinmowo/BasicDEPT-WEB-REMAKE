@@ -16,9 +16,7 @@ export default function Taskbar() {
   const handleSidebar = () => {
     setState(!state); // Toggle the state by negating its current value
   };
-  const headroomStyle = {
-    // Add margin as needed
-  };
+  const headroomStyle = {};
   return (
     <div className="taskbar">
       {shouldRenderCounter && (
@@ -26,39 +24,30 @@ export default function Taskbar() {
           <div className="navig">
             <nav className="nav">
               <h1>
-                <a href="./">BASIC/DEPT®</a>
+                <a href="./">RentFaster®</a>
               </h1>
               <ul>
                 <li>
-                  <a href="#work">WORK</a>
+                  <a href="#about">About</a>
                 </li>
                 <li>
-                  <a href="#about">ABOUT</a>
+                  <a href="#new">Ride</a>
                 </li>
                 <li>
-                  <a href="#new">NEW</a>
+                  <a href="#thinking">Drive</a>
                 </li>
                 <li>
-                  <a href="#thinking">THINKING</a>
+                  <a href="#careers">Host</a>
                 </li>
                 <li>
-                  <a href="#careers">CAREERS</a>
-                </li>
-                <li>
-                  <a href="#contact">CONTACT</a>
+                  <a href="#contact">Contact</a>
                 </li>
               </ul>
-              <svg
-                onClick={handleSidebar}
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                className="bi bi-three-dots"
-                viewBox="0 0 16 16"
-              >
-                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
-              </svg>
+              <div>
+                <button>Sign in </button>
+                <span> </span>
+                <button>Sign up </button>
+              </div>
             </nav>
           </div>
         </Headroom>

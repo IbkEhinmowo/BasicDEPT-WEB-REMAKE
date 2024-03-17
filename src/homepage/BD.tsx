@@ -4,14 +4,11 @@ export default function BD() {
       <div className="below11">
         <section id="basictext">
           <p>
-            BASIC/DEPT® is a global branding and digital design agency building
-            products, services, and eCommerce experiences that turn cultural
-            values into company value.
+            "Rent Faster, a premier car rental company specializing in
+            peer-to-peer car rental, offers exceptional services and digital
+            experiences blending convenience with innovation."
           </p>
-          <button>SEE THE WORK</button>
-        </section>
-        <section id="logo">
-          <h1>B/D®</h1>
+          <button>BOOK NOW</button>
         </section>
       </div>
       <div className="pictureline">

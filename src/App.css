@@ -1,3 +1,9 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
 #root {
   margin: 0%;
   padding: 0%;
@@ -8,11 +14,9 @@ html {
 }
 .taskbar {
   width: 100vw;
-
   position: relative;
   right: 0px;
   margin: 0;
-  background-color: #252422;
 }
 .nav {
   max-width: 95vw;
@@ -22,8 +26,6 @@ html {
   justify-content: space-around;
   align-items: center;
   border-radius: 10px;
-  background-color: #252422;
-  background-color: transparent;
   margin: auto;
   transition: background-color 0.3s;
 }
@@ -37,6 +39,7 @@ html {
   left: 0;
   right: 0;
   zindex: 1;
+  background-color: transparent;
 }
 .headroom--unfixed {
   position: relative;
@@ -58,10 +61,7 @@ html {
   color: black !important;
   z-index: 10;
 }
-.headroom--pinned a,
-svg {
-  color: pink !important;
-}
+
 @keyframes fadeInFromLeft {
   0% {
     opacity: 0; /* Start slightly faded */
@@ -88,7 +88,7 @@ li {
 }
 .taskbar a {
   text-decoration: none;
-  color: #f9cdcd;
+  color: black;
 }
 image {
   width: 30px;
@@ -97,7 +97,7 @@ image {
 }
 .taskbar svg {
   width: 30px;
-  color: pink;
+  color: black;
   transition: transform 0.4s ease;
   cursor: pointer;
 }
@@ -114,11 +114,11 @@ video {
 }
 
 li a {
-  color: #f9cdcd;
+  color: black !important;
   font-size: medium;
   text-decoration: none;
   display: inline-block;
-  font-weight: 1000;
+  font-weight: 600;
   padding: 0.5em;
   margin-left: -0.5rem;
   position: relative;
@@ -128,7 +128,7 @@ li a {
   &:after {
     position: absolute;
     content: "";
-    border-bottom: 2px solid #f9cdcd;
+    border-bottom: 2px solid black;
     border-radius: 1em;
     bottom: 0.3em;
     transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -156,17 +156,18 @@ li a {
 
 #basictest {
   max-width: 30%;
+  margin: auto;
 }
 .below11 {
   border-top: #252422 solid;
   border-width: thin;
-  width: 90%;
+  width: 70%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: auto;
 
-  margin-top: 15%;
+  margin-top: 10%;
 }
 .below1 p {
   width: 70%;
@@ -213,6 +214,35 @@ li a {
   font-size: larger;
   font-family: Inter;
 }
+
+.rent-faster-footer {
+  background-color: #f0f0f0; /* Adjust color if needed */
+  padding: 30px 0;
+  font-size: 14px;
+  color: #555; /* Adjust color if needed */
+}
+
+.container {
+  max-width: 1000px; /* Adjust as desired */
+  margin: 0 auto;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+}
+
 @media only screen and (max-width: 1200px) {
   .nav ul {
     display: none;
