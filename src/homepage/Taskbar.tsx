@@ -15,13 +15,14 @@ export default function Taskbar() {
 
   const handleSidebar = () => {
     setState(!state); // Toggle the state by negating its current value
+    
   };
   const headroomStyle = {
     // Add margin as needed
   };
   return (
     <div className="taskbar">
-      {shouldRenderCounter && (
+      {shouldRenderCounter && 
         <Headroom style={headroomStyle} disableInlineStyles={true}>
           <div className="navig">
             <nav className="nav">
@@ -62,7 +63,13 @@ export default function Taskbar() {
             </nav>
           </div>
         </Headroom>
-      )}
+      }
+
+      {state && <div className="sidebar">
+
+        <div className="sidebar-content"><h1>Side bar</h1>
+        </div>
+        </div>}
     </div>
   );
 }
