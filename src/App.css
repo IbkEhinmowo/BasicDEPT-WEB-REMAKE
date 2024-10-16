@@ -1,3 +1,9 @@
+:root {
+  --color-background: #252422;
+  --color-text: #f9cdcd;
+  --color-hover: pink;
+}
+
 #root {
   margin: 0%;
   padding: 0%;
@@ -6,25 +12,23 @@
 html {
   scroll-behavior: smooth;
   -webkit-user-select: none; /* Chrome, Safari, and Opera */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* Internet Explorer/Edge */
-  user-select: none;         /* Non-prefixed version for modern browsers */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version for modern browsers */
 }
-.sidebar-content{
+.sidebar-content {
   position: relative;
   left: 0px;
   width: 100%;
   height: 100vh;
-  background-color: #252422
-
+  background-color: var(--color-background);
 }
 .taskbar {
   width: 100vw;
-
   position: relative;
   right: 0px;
   margin: 0;
-  background-color: #252422;
+  background-color: var(--color-background);
 }
 .nav {
   max-width: 95vw;
@@ -34,7 +38,7 @@ html {
   justify-content: space-around;
   align-items: center;
   border-radius: 10px;
-  background-color: #252422;
+  background-color: var(--color-background);
   background-color: transparent;
   margin: auto;
   transition: background-color 0.3s;
@@ -61,7 +65,6 @@ html {
   position: fixed;
   transform: translateY(-100%);
 }
-
 .headroom--pinned {
   width: 100vw;
   position: fixed;
@@ -72,7 +75,7 @@ html {
 }
 .headroom--pinned a,
 svg {
-  color: pink !important;
+  color: var(--color-hover) !important;
 }
 @keyframes fadeInFromLeft {
   0% {
@@ -91,7 +94,6 @@ svg {
 .nav ul {
   padding-right: 8rem;
   display: flex;
-
   width: 55%;
 }
 li {
@@ -100,7 +102,7 @@ li {
 }
 .taskbar a {
   text-decoration: none;
-  color: #f9cdcd;
+  color: var(--color-text);
 }
 image {
   width: 30px;
@@ -109,14 +111,13 @@ image {
 }
 .taskbar svg {
   width: 30px;
-  color: pink;
+  color: var(--color-hover);
   transition: transform 0.4s ease;
   cursor: pointer;
 }
 .taskbar svg:hover {
   transform: scale(1.3);
 }
-
 video {
   top: 0;
   left: 0;
@@ -124,9 +125,8 @@ video {
   height: 100vh;
   object-fit: cover;
 }
-
 li a {
-  color: #f9cdcd;
+  color: var(--color-text);
   font-size: medium;
   text-decoration: none;
   display: inline-block;
@@ -135,71 +135,61 @@ li a {
   margin-left: -0.5rem;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-
   &:before,
   &:after {
     position: absolute;
     content: "";
-    border-bottom: 2px solid #f9cdcd;
+    border-bottom: 2px solid var(--color-text);
     border-radius: 1em;
     bottom: 0.3em;
     transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
-
   &:before {
     width: 1em;
     transform-origin: left;
   }
-
   &:after {
     width: 82%;
     left: 1em;
     transform: translateX(110%);
   }
-
   &:hover:before {
     transform: scaleX(0.3);
   }
-
   &:hover:after {
     transform: translateX(0);
   }
 }
-
 #basictest {
   max-width: 30%;
 }
 .below11 {
-  border-top: #252422 solid;
+  border-top: var(--color-background) solid;
   border-width: thin;
   width: 90%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: auto;
-
   margin-top: 15%;
 }
 .below1 p {
   width: 70%;
-
-  color: #252422;
+  color: var(--color-background);
   font-family: avenir;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
-
 .below1 h1 {
-  color: #252422;
+  color: var(--color-background);
   font-family: Avenir;
   font-size: 10vw;
   font-style: normal;
   font-weight: bolder;
   line-height: normal;
 }
-
 .pictureline {
   display: flex;
   justify-content: space-around;
@@ -212,14 +202,12 @@ li a {
   width: 29vw;
   transition: transform 0.4s ease; /* Smooth zoom effect */
 }
-
 .pictureline img:hover {
   transform: scale(1.2); /* Zoom by 120% */
 }
 .imgclass {
   overflow: hidden;
 }
-
 .pictureline h1 {
   font-weight: 700;
   font-size: larger;
