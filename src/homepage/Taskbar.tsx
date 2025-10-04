@@ -1,23 +1,23 @@
 import Headroom from "react-headroom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, CSSProperties } from "react";
 
-export default function Taskbar() {
-  const [state, setState] = useState(false);
-  const [shouldRenderCounter, setShouldRenderCounter] = useState(false);
+export default function Taskbar(): JSX.Element {
+  const [state, setState] = useState<boolean>(false);
+  const [shouldRenderCounter, setShouldRenderCounter] = useState<boolean>(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
+    const timeout: number = window.setTimeout(() => {
       setShouldRenderCounter(true);
     }, 4000);
 
     return () => clearTimeout(timeout);
   }, []);
 
-  const handleSidebar = () => {
+  const handleSidebar = (): void => {
     setState(!state); // Toggle the state by negating its current value
     
   };
-  const headroomStyle = {
+  const headroomStyle: CSSProperties = {
     // Add margin as needed
   };
   return (

@@ -25,6 +25,7 @@ html {
 }
 .taskbar {
   width: 100vw;
+  padding: 1%;
 
   position: relative;
   right: 0px;

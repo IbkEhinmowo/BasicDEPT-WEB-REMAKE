@@ -1,4 +1,4 @@
-export default function BD() {
+export default function BD(): JSX.Element {
   return (
     <div className="below1">
       <div className="below11">
