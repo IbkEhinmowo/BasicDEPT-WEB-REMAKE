@@ -1,3 +1,9 @@
+/** @format */
+
+import photo1 from "../assets/photo1.jpg";
+import photo2 from "../assets/photo2.jpg";
+import photo3 from "../assets/photo3.jpg";
+
 export default function BD(): JSX.Element {
   return (
     <div className="below1">
@@ -17,21 +23,21 @@ export default function BD(): JSX.Element {
       <div className="pictureline">
         <div>
           <div className="imgclass">
-            <img src="src/assets/photo1.jpg" alt="" />
+            <img src={photo1} alt="Patagonia" />
           </div>
 
           <h1> PATAGONIA</h1>
         </div>
         <div className="photo3">
           <div className="imgclass">
-            <img src="src/assets/photo3.jpg" alt="" />
+            <img src={photo3} alt="Wilson" />
           </div>
 
           <h1>WILSON</h1>
         </div>
         <div>
           <div className="imgclass">
-            <img src="src/assets/photo2.jpg" alt="" />
+            <img src={photo2} alt="Google Store" />
           </div>
 
           <h1>GOOGLE STORE</h1>
