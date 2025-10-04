@@ -1,4 +1,4 @@
-export default function Video() {
+export default function Video(): JSX.Element {
   return (
     <div>
       <video autoPlay loop muted playsInline>
