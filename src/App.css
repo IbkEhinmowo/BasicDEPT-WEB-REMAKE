@@ -1,3 +1,5 @@
+/** @format */
+
 :root {
   --color-background: #252422;
   --color-text: #f9cdcd;
@@ -43,12 +45,17 @@ html {
   background-color: var(--color-background);
   background-color: transparent;
   margin: auto;
-  transition: background-color 0.3s;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .navig {
   animation: fadeInFromLeft linear 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  transition: background-color 0.3s ease;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 .headroom {
   top: 0;
@@ -56,6 +63,9 @@ html {
   right: 0;
   z-index: 1;
   height: 50px;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
 }
 .headroom--unfixed {
   position: relative;
@@ -72,13 +82,34 @@ html {
   width: 100vw;
   position: fixed;
   top: 0px !important;
+  left: 0px !important;
+  right: 0px !important;
   transform: translateY(0%);
   color: black !important;
+  background-color: white !important;
   z-index: 10;
+  padding: 1% 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+.headroom--pinned .navig {
+  background-color: white !important;
+  transition: background-color 0.3s ease;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.headroom--pinned .nav {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0 2%;
+  border-radius: 0;
 }
 .headroom--pinned a,
-svg {
-  color: var(--color-hover) !important;
+.headroom--pinned svg {
+  color: black !important;
+  transition: color 0.3s ease;
 }
 @keyframes fadeInFromLeft {
   0% {
@@ -90,6 +121,7 @@ svg {
     transform: translateY(0); /* Return to its normal position */
   }
 }
+
 .nav h1 {
   font-size: x-large;
   font-weight: bolder;
@@ -188,7 +220,7 @@ li a {
 .below1 h1 {
   color: var(--color-background);
   font-family: Avenir;
-  font-size: 10vw;
+  font-size: 6vw;
   font-style: normal;
   font-weight: bolder;
   line-height: normal;
@@ -216,6 +248,15 @@ li a {
   font-size: larger;
   font-family: Inter;
 }
+.pictureline p {
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  margin-top: 8px;
+  color: #666;
+  max-width: 29vw;
+}
 @media only screen and (max-width: 1200px) {
   .nav ul {
     display: none;
@@ -230,5 +271,9 @@ li a {
   .pictureline img {
     width: 90vw;
     transition: transform 0.4s ease; /* Smooth zoom effect */
+  }
+  .pictureline p {
+    max-width: 90vw;
+    font-size: 11px;
   }
 }
